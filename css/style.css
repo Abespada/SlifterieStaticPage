@@ -1,0 +1,105 @@
+@font-face {
+  font-family: art-nouveau-bistro;
+  src: url("../fonts/P22 Art Nouveau Bistro Regular.ttf");
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  text-align: center;
+}
+
+body {
+  display: flex;
+  flex-flow: column;
+  font-family: 'Quicksand', sans-serif;
+  color: #ffffff;
+}
+
+.top-bar {
+  background-color: white;
+  color: black;
+  padding-top: 1vw;
+  padding-bottom: 1vw;
+  box-shadow: 0 3px 5px gray;
+  flex: 0 1 auto;
+}
+
+.page-title-container {
+  font-family: art-nouveau-bistro, sans-serif;
+  font-size: calc(2rem + 8vw);
+  line-height: calc(2rem + 8vw);
+  margin: 0 1vw;
+}
+
+.page-title {
+  position: relative;
+  top: calc(0.25rem + 1vw);
+}
+
+.top-bar-logo {
+  max-height: calc(2rem + 4vw);
+  width: auto;
+}
+
+.content {
+  position: relative;
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.background {
+  /* Set up positioning */
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+
+  /* Set rules to fill background */
+  height: 100%;
+  width: 100%;
+
+  object-fit: cover;
+}
+
+.content-block {
+  background-color: rgba(0, 0, 0, 0.75);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.announcement {
+  margin: 0;
+  font-weight: 700;
+}
+
+.join-text {
+  font-weight: 300;
+}
+
+
+@media (min-width: 1180px) {
+  .top-bar {
+    padding-top: 11.8px;
+    padding-bottom: 11.8px;
+  }
+
+  .page-title-container {
+    font-size: calc(2rem + (1180px * 0.08));
+    line-height: calc(2rem + (1180px * 0.08));
+    margin: 0 11.8px;
+  }
+
+  .page-title {
+    top: calc(0.25rem + (1180px * 0.01));
+  }
+
+  .top-bar-logo {
+    max-height: calc(2rem + (1180px * 0.04));
+  }
+}
